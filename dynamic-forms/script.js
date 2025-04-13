@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initializeChoices() {
-  if (!JQuery) {
+  if (!window.jQuery) {
     console.log("Backbone not available");
     return;
   }
@@ -84,7 +84,7 @@ function initializeChoices() {
         }));
 
         try {
-          const choices = JQuery(`#${select.id}`).data("choicesjs");
+          const choices = jQuery(`#${select.id}`).data("choicesjs");
           if (choices && typeof choices.setChoices === "function") {
             choices.setChoices(choicesData, "value", "label", true);
             console.log(
