@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeChoices() {
   if (!window.jQuery) {
-    console.log("Backbone not available");
+    console.log("JQuery not available");
     return;
   }
 
@@ -79,7 +79,7 @@ function initializeChoices() {
         }
 
         const choicesData = filteredGroups.map((group) => ({
-          value: group.groupName,
+          value: `${group.groupName} [ID:${group.id}]`,
           label: group.groupName,
         }));
 
